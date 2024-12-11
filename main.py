@@ -15,6 +15,11 @@ if __name__ == '__main__':
 
     list_bbox, list_matrix = tesseract_reader.read(img)
 
+    for matrix in list_matrix:
+        print(matrix)
+
+    print(len(list_matrix))
+
 
 
 
