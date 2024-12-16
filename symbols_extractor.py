@@ -3,6 +3,7 @@ import pytesseract
 from tesseract_reader import ImageReader
 from tesseract_reader.bbox.bbox import BBox
 
+
 class SymbolsExtractor:
     
     @staticmethod

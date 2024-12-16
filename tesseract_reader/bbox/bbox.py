@@ -30,6 +30,7 @@ class BBox(Serializable):
     
     def set_index(self, index):
         self.index = index
+        
     @property
     def x_bottom_right(self) -> int:
         return self.x_top_left + self.width
