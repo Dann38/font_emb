@@ -16,10 +16,12 @@ if __name__ == '__main__':
 
     img = image_reader.read(path_img)
 
-    # print(tesseract_reader.read(img))
+    print(tesseract_reader.read(img))
+
     char_tesseract_reader = CharTesseractReader(tesseract_config)
     print(char_tesseract_reader.read(img))
 
+    # print(char_tesseract_reader.get_document_height(img))
 
 
 

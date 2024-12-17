@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="590fc6f2-44af-4a21-8ead-53d15c57eca6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/char_tesseract_reader.py" afterDir="false" />
+    <list default="true" id="590fc6f2-44af-4a21-8ead-53d15c57eca6" name="Changes" comment="renamed variables">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/char_tesseract_reader.py" beforeDir="false" afterPath="$PROJECT_DIR$/char_tesseract_reader.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mlp.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/symbols_extractor.py" beforeDir="false" afterPath="$PROJECT_DIR$/symbols_extractor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tesseract_reader/bbox/bbox.py" beforeDir="false" afterPath="$PROJECT_DIR$/tesseract_reader/bbox/bbox.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tesseract_reader/tesseract_reader.py" beforeDir="false" afterPath="$PROJECT_DIR$/tesseract_reader/tesseract_reader.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_symbols_getter.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_symbols_getter.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -244,7 +239,23 @@
       <option name="project" value="LOCAL" />
       <updated>1734278412324</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="added a new class CharTesseractReader that takes an image and returns symbols and theirs bboxes">
+      <option name="closed" value="true" />
+      <created>1734330799951</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1734330799952</updated>
+    </task>
+    <task id="LOCAL-00011" summary="renamed variables">
+      <option name="closed" value="true" />
+      <created>1734431950739</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1734431950739</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -275,6 +286,8 @@
     <MESSAGE value="Добавила вывод символов и тест" />
     <MESSAGE value="returned tesseract_reader" />
     <MESSAGE value="added image reading via ImageReader" />
-    <option name="LAST_COMMIT_MESSAGE" value="added image reading via ImageReader" />
+    <MESSAGE value="added a new class CharTesseractReader that takes an image and returns symbols and theirs bboxes" />
+    <MESSAGE value="renamed variables" />
+    <option name="LAST_COMMIT_MESSAGE" value="renamed variables" />
   </component>
 </project>
