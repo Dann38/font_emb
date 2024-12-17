@@ -12,22 +12,20 @@ class CharTesseractReader(TesseractReader):
     def read(self, image: np.ndarray) -> Tuple[List[BBox], List[str]]:
         tesseract_bboxes = pytesseract.image_to_boxes(
             config=self.config.get_args_str(),
-            image=image,
-            output_type=pytesseract.Output.DICT)
+            image=image)
         tesseract_bboxes = tesseract_bboxes.split('\n')
         list_bbox = []
         list_char = []
-
 
         for i in range(len(tesseract_bboxes)):
             temp = tesseract_bboxes[i].split(' ')
             if len(temp) < 5: continue
             char = temp[0]
-            x = int(temp[1])
-            y = int(temp[2])
-            w = int(temp[3]) - x
-            h = int(temp[4]) - y
+            x_top_left = int(temp[1])
+            y_top_left = int(temp[2])
+            width = int(temp[3]) - x_top_left
+            height = int(temp[4]) - y_top_left
             list_char.append(char)
-            list_bbox.append(BBox(x, y, w, h))
+            list_bbox.append(BBox(x_top_left, y_top_left, width, height))
 
         return list_bbox, list_char
