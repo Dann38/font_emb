@@ -12,7 +12,8 @@ class CharTesseractReader(TesseractReader):
 
     @staticmethod
     def get_document_height(image: np.ndarray) -> int:
-        return image.shape[0]
+        height = image.shape[0]
+        return height
 
     def read(self, image: np.ndarray) -> Tuple[List[BBox], List[str]]:
         tesseract_bboxes = pytesseract.image_to_boxes(
@@ -25,13 +26,14 @@ class CharTesseractReader(TesseractReader):
 
         for i in range(len(tesseract_bboxes)):
             temp = tesseract_bboxes[i].split(' ')
+            print(temp)
             if len(temp) < 5:
                 continue
             char = temp[0]
             x_top_left = int(temp[1])
             y_top_left = doc_height - int(temp[2])
             width = int(temp[3]) - x_top_left
-            height = int(temp[4]) - y_top_left
+            height = y_top_left - (doc_height - int(temp[4]))
             list_char.append(char)
             list_bbox.append(BBox(x_top_left, y_top_left, width, height))
 
