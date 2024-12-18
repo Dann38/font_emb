@@ -7,7 +7,6 @@ from pytesseract import pytesseract
 class TesseractReaderConfig:
     def __init__(self, lang="rus"):
         self.lang = lang
-        pass
 
     def get_args_str(self) -> str:
         args_str = f"-l {self.lang} "
@@ -23,8 +22,9 @@ class TesseractReader:
             config=self.config.get_args_str(),
             image=image,
             output_type=pytesseract.Output.DICT)
+
         list_bbox = []
-        list_matrix = []
+        list_text = []
         for index_bbox, level in enumerate(tesseract_bboxes["level"]):
             if level == 5:
                 x_top_left = tesseract_bboxes["left"][index_bbox]
@@ -32,8 +32,8 @@ class TesseractReader:
                 width = tesseract_bboxes["width"][index_bbox]
                 height = tesseract_bboxes["height"][index_bbox]
                 list_bbox.append(BBox(x_top_left, y_top_left, width, height))
-                list_matrix.append(image[y_top_left:y_top_left + height, x_top_left:x_top_left + width])
-        return list_bbox, list_matrix
+                list_text.append(tesseract_bboxes["text"][index_bbox])
+        return list_bbox, list_text
 
 
 
