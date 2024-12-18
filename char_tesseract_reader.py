@@ -19,6 +19,7 @@ class CharTesseractReader(TesseractReader):
         tesseract_bboxes = pytesseract.image_to_boxes(
             config=self.config.get_args_str(),
             image=image)
+        print(tesseract_bboxes)
         doc_height = self.get_document_height(image)
         tesseract_bboxes = tesseract_bboxes.split('\n')
         list_bbox = []
@@ -31,9 +32,9 @@ class CharTesseractReader(TesseractReader):
                 continue
             char = temp[0]
             x_top_left = int(temp[1])
-            y_top_left = doc_height - int(temp[2])
+            y_top_left = doc_height - int(temp[4])
             width = int(temp[3]) - x_top_left
-            height = y_top_left - (doc_height - int(temp[4]))
+            height = int(temp[4]) - int(temp[2])
             list_char.append(char)
             list_bbox.append(BBox(x_top_left, y_top_left, width, height))
 
