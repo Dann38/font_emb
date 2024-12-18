@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="590fc6f2-44af-4a21-8ead-53d15c57eca6" name="Changes" comment="added a method get_document_height that returns the image height to get the correct y_top_left and height">
-      <change afterPath="$PROJECT_DIR$/char_matrix_extractor.py" afterDir="false" />
+    <list default="true" id="590fc6f2-44af-4a21-8ead-53d15c57eca6" name="Changes" comment="created char_matrix_extractor, edited char_tesseract_reader">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/char_tesseract_reader.py" beforeDir="false" afterPath="$PROJECT_DIR$/char_tesseract_reader.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/char_matrix_extractor.py" beforeDir="false" afterPath="$PROJECT_DIR$/char_matrix_extractor.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -272,7 +270,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734439501622</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="created char_matrix_extractor, edited char_tesseract_reader">
+      <option name="closed" value="true" />
+      <created>1734493575119</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1734493575119</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -307,6 +313,7 @@
     <MESSAGE value="renamed variables" />
     <MESSAGE value="added a method get_document_height that returns the image height to get the correct y_top_left" />
     <MESSAGE value="added a method get_document_height that returns the image height to get the correct y_top_left and height" />
-    <option name="LAST_COMMIT_MESSAGE" value="added a method get_document_height that returns the image height to get the correct y_top_left and height" />
+    <MESSAGE value="created char_matrix_extractor, edited char_tesseract_reader" />
+    <option name="LAST_COMMIT_MESSAGE" value="created char_matrix_extractor, edited char_tesseract_reader" />
   </component>
 </project>
