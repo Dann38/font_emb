@@ -19,16 +19,19 @@ class CharTesseractReader(TesseractReader):
         tesseract_bboxes = pytesseract.image_to_boxes(
             config=self.config.get_args_str(),
             image=image)
-        print(tesseract_bboxes)
+        # print(tesseract_bboxes)
         doc_height = self.get_document_height(image)
         tesseract_bboxes = tesseract_bboxes.split('\n')
         list_bbox = []
         list_char = []
 
+        def is_bbox(tmp):
+            return len(tmp) < 5
+
         for i in range(len(tesseract_bboxes)):
             temp = tesseract_bboxes[i].split(' ')
-            print(temp)
-            if len(temp) < 5:
+            # print(temp)
+            if is_bbox(temp):
                 continue
             char = temp[0]
             x_top_left = int(temp[1])
