@@ -1,6 +1,4 @@
 import os
-import pytesseract
-from symbols_extractor import SymbolsExtractor
 from tesseract_reader import ImageReader, TesseractReader, TesseractReaderConfig
 from char_tesseract_reader import CharTesseractReader
 from char_matrix_extractor import CharMatrixExtractor
@@ -8,7 +6,7 @@ from char_matrix_extractor import CharMatrixExtractor
 if __name__ == '__main__':
     # Image path /example_img/img_1.jpeg
     path_project = os.path.abspath(os.path.join(os.getcwd(), "."))
-    path_img = os.path.join(path_project, 'example_img', "test.jpeg")
+    path_img = os.path.join(path_project, 'example_img', "2.jpeg")
 
     # Objects
     image_reader = ImageReader()
