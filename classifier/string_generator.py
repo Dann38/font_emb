@@ -1,5 +1,6 @@
 import random
 
+
 class StringGenerator:
 
     @staticmethod
@@ -29,6 +30,7 @@ class StringGenerator:
             elif choice == 3:
                 string = random.choice(alphabet_eng_big) + random.choice(alphabet_eng_small) + random.choice(alphabet_eng_small)
         return string
+
 
 print(StringGenerator.text_generator('eng'))
 
