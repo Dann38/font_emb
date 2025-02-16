@@ -32,6 +32,6 @@ class StringGenerator:
         return string
 
 
-print(StringGenerator.text_generator('eng'))
+# print(StringGenerator.text_generator('eng'))
 
 # Текст текст ТЕКСТ
