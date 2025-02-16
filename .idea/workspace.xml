@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="590fc6f2-44af-4a21-8ead-53d15c57eca6" name="Changes" comment="put things in order">
-      <change afterPath="$PROJECT_DIR$/classifier/font_generator.py" afterDir="false" />
+    <list default="true" id="590fc6f2-44af-4a21-8ead-53d15c57eca6" name="Changes" comment="create font_generator that generate images">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -247,7 +247,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739550665263</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="create font_generator that generate images">
+      <option name="closed" value="true" />
+      <created>1739724785988</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1739724785988</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -261,7 +269,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="task_tesseract" />
+                        <option value="task_classifier" />
                       </list>
                     </value>
                   </entry>
@@ -278,6 +286,7 @@
     <MESSAGE value="Добавила вывод символов и тест" />
     <MESSAGE value="added function string_generator" />
     <MESSAGE value="put things in order" />
-    <option name="LAST_COMMIT_MESSAGE" value="put things in order" />
+    <MESSAGE value="create font_generator that generate images" />
+    <option name="LAST_COMMIT_MESSAGE" value="create font_generator that generate images" />
   </component>
 </project>
