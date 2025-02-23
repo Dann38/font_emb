@@ -27,8 +27,8 @@ combinations = itertools.product(weight, slant, underline, overstrike, backgroun
 def generate_file_name(name, w, s, u, o, b, i):
 
     file_name = f'training_images/{name}_{w}_{s}_'
-    file_name += 'u_' if underline else 'nu_'
-    file_name += 'o_' if overstrike else 'no_'
+    file_name += 'u_' if u else 'nu_'
+    file_name += 'o_' if o else 'no_'
     file_name += b + '_' if b else ''
 
     return file_name + str(i) + '_eng' + '.png'
