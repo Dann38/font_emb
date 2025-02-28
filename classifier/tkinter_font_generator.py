@@ -85,7 +85,7 @@ class Generator:
 
         return file_name + str(i) + '_eng' + '.png'
 
-
+    # Генерация всех комбинаций шрифтов
     def generate_random_font(self):
 
         root = tkinter.Tk()
@@ -117,12 +117,11 @@ class Generator:
 
             i += 1
 
-Generator = Generator()
-for i in range(100):
-    if i < 30:
-        Generator.draw_font(i)
-    elif i < 60:
-        Generator.draw_font(i, style=True)
-    else:
-        Generator.draw_font(i, text=True)
-
+# Generator = Generator()
+# for i in range(100):
+#     if i < 30:
+#         Generator.draw_font(i)
+#     elif i < 60:
+#         Generator.draw_font(i, style=True)
+#     else:
+#         Generator.draw_font(i, text=True)
