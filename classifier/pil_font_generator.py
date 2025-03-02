@@ -7,31 +7,31 @@ from string_generator import StringGenerator
 class FontGenerator:
     def __init__(self):
         self.fonts = [
-            r'fonts\\arial.ttf', # Arial
-            r'fonts\\times.ttf' # Times New Roman
-            r'fonts\\calibri.ttf', # Calibri
-            r'fonts\\impact.ttf', # Impact
-            r'fonts\\ariblk.ttf', # Arial Black
-            r'fonts\\cour.ttf', # Courier New
-            r'fonts\\consola.ttf', # Consolas
-            r'fonts\\CascadiaMono.ttf', # Cascadis Mono
-            r'fonts\\verdana.ttf', # Verdana
-            r'fonts\\tahoma.ttf', # Tahoma
-            r'fonts\\lucon.ttf', # Lucida Console
-            r'fonts\\GARA.ttf', # Garamond
-            r'fonts\\BKANT.ttf', # Book Antiqua
-            r'fonts\\cambria.ttc', # Cambria
-            r'fonts\\constan.ttf', # Constantia
-            r'fonts\\segoesc.ttf', # Segoe Script
-            r'fonts\\comic.ttf', # Comic Sans MS
-            r'fonts\\MTCORSVA.ttf', # Monotype Corsiva
+            r'fonts\\arial.ttf',  # Arial
+            r'fonts\\times.ttf'  # Times New Roman
+            r'fonts\\calibri.ttf',  # Calibri
+            r'fonts\\impact.ttf',  # Impact
+            r'fonts\\ariblk.ttf',  # Arial Black
+            r'fonts\\cour.ttf',  # Courier New
+            r'fonts\\consola.ttf',  # Consolas
+            r'fonts\\CascadiaMono.ttf',  # Cascadis Mono
+            r'fonts\\verdana.ttf',  # Verdana
+            r'fonts\\tahoma.ttf',  # Tahoma
+            r'fonts\\lucon.ttf',  # Lucida Console
+            r'fonts\\GARA.ttf',  # Garamond
+            r'fonts\\BKANT.ttf',  # Book Antiqua
+            r'fonts\\cambria.ttc',  # Cambria
+            r'fonts\\constan.ttf',  # Constantia
+            r'fonts\\segoesc.ttf',  # Segoe Script
+            r'fonts\\comic.ttf',  # Comic Sans MS
+            r'fonts\\MTCORSVA.ttf',  # Monotype Corsiva
 
         ]
         self.image_size = (120, 60)
         self.font_size = 40
         self.intervals = [
-            (-10, 10), # отклонение по ширине
-            (-20, 10) # отклонение по высоте
+            (-10, 10),  # отклонение по ширине
+            (-20, 10)  # отклонение по высоте
         ]
 
     def random_position_with_constraints(self):
