@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="590fc6f2-44af-4a21-8ead-53d15c57eca6" name="Changes" comment="added generator of 2 images with 4 combinations">
-      <change afterPath="$PROJECT_DIR$/classifier/model.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/classifier/pil_font_generator.py" afterDir="false" />
+    <list default="true" id="590fc6f2-44af-4a21-8ead-53d15c57eca6" name="Changes" comment="added font_generator using PIL">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classifier/font_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/classifier/tkinter_font_generator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classifier/pil_font_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/classifier/pil_font_generator.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,12 +48,13 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "task__classifier",
-    "last_opened_file_path": "C:/Users/Маша/PycharmProjects/font_emb/tests",
+    "last_opened_file_path": "C:/Users/Маша/PycharmProjects/font_emb/classifier/fonts",
     "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Console Colors"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Маша\PycharmProjects\font_emb\classifier\fonts" />
       <recent name="C:\Users\Маша\PycharmProjects\font_emb\tests" />
       <recent name="C:\Users\Маша\PycharmProjects\font_emb" />
     </key>
@@ -297,7 +296,31 @@
       <option name="project" value="LOCAL" />
       <updated>1740328489873</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="added comments">
+      <option name="closed" value="true" />
+      <created>1740764628138</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1740764628138</updated>
+    </task>
+    <task id="LOCAL-00015" summary="added model">
+      <option name="closed" value="true" />
+      <created>1740764650671</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1740764650671</updated>
+    </task>
+    <task id="LOCAL-00016" summary="added font_generator using PIL">
+      <option name="closed" value="true" />
+      <created>1740764705911</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1740764705911</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -337,6 +360,9 @@
     <MESSAGE value="added fonts classification" />
     <MESSAGE value="fixed" />
     <MESSAGE value="added generator of 2 images with 4 combinations" />
-    <option name="LAST_COMMIT_MESSAGE" value="added generator of 2 images with 4 combinations" />
+    <MESSAGE value="added comments" />
+    <MESSAGE value="added model" />
+    <MESSAGE value="added font_generator using PIL" />
+    <option name="LAST_COMMIT_MESSAGE" value="added font_generator using PIL" />
   </component>
 </project>

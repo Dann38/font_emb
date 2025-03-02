@@ -1,3 +1,4 @@
+import os.path
 import random
 from PIL import Image, ImageDraw, ImageFont
 from string_generator import StringGenerator
@@ -6,53 +7,94 @@ from string_generator import StringGenerator
 class FontGenerator:
     def __init__(self):
         self.fonts = [
-            r'C:\Windows\Fonts\Arial.ttf',
-            r'C:\Windows\Fonts\Times New Roman.ttf',
-            r'C:\Windows\Fonts\Calibri.ttf',
-            r'C:\Windows\Fonts\Impact.ttf',
-            r'C:\Windows\Fonts\Arial Black.ttf',
-            r'C:\Windows\Fonts\Courier New.ttf',
-            r'C:\Windows\Fonts\Consolas.ttf',
-            r'C:\Windows\Fonts\Cascadia Mono.ttf',
-            r'C:\Windows\Fonts\Helvetica.ttf',
-            r'C:\Windows\Fonts\Verdana.ttf',
-            r'C:\Windows\Fonts\Tahoma.ttf',
-            r'C:\Windows\Fonts\Lucida Console.ttf',
-            r'C:\Windows\Fonts\Garamond.ttf',
-            r'C:\Windows\Fonts\Book Antiqua.ttf',
-            r'C:\Windows\Fonts\Cambria.ttf',
-            r'C:\Windows\Fonts\Constantia.ttf',
-            r'C:\Windows\Fonts\Segoe Script.ttf',
-            r'C:\Windows\Fonts\Comic Sans MS.ttf',
-            r'C:\Windows\Fonts\Monotype Corsiva.ttf',
-            r'C:\Windows\Fonts\Leelawadee UI Semilight.ttf'
+            r'fonts\\arial.ttf', # Arial
+            r'fonts\\times.ttf' # Times New Roman
+            r'fonts\\calibri.ttf', # Calibri
+            r'fonts\\impact.ttf', # Impact
+            r'fonts\\ariblk.ttf', # Arial Black
+            r'fonts\\cour.ttf', # Courier New
+            r'fonts\\consola.ttf', # Consolas
+            r'fonts\\CascadiaMono.ttf', # Cascadis Mono
+            r'fonts\\verdana.ttf', # Verdana
+            r'fonts\\tahoma.ttf', # Tahoma
+            r'fonts\\lucon.ttf', # Lucida Console
+            r'fonts\\GARA.ttf', # Garamond
+            r'fonts\\BKANT.ttf', # Book Antiqua
+            r'fonts\\cambria.ttc', # Cambria
+            r'fonts\\constan.ttf', # Constantia
+            r'fonts\\segoesc.ttf', # Segoe Script
+            r'fonts\\comic.ttf', # Comic Sans MS
+            r'fonts\\MTCORSVA.ttf', # Monotype Corsiva
+
+        ]
+        self.image_size = (120, 60)
+        self.font_size = 40
+        self.intervals = [
+            (-10, 10), # отклонение по ширине
+            (-20, 10) # отклонение по высоте
         ]
 
+    def random_position_with_constraints(self):
+        # разделяем интервалы для ширины (x) и высоты (y)
+        x_interval, y_interval = self.intervals
 
-    def create_image_with_text(self, text, font_path, image_size=(200, 100), font_size=40):
+        # генерация случайной позиции по ширине
+        x = random.randint(x_interval[0], x_interval[1])
+
+        # генерация случайной позиции по высоте
+        y = random.randint(y_interval[0], y_interval[1])
+
+        return (x, y)
+
+    def draw_font(self, text, font_path, image_size, font_size):
         image = Image.new('RGB', image_size, 'white')  # изображение с белым фоном
         draw = ImageDraw.Draw(image)
 
         font = ImageFont.truetype(font_path, font_size)
 
-        # центрирование
-        text_bbox = draw.textbbox((0, 0), text, font=font)
-        text_width = text_bbox[2] - text_bbox[0]
-        text_height = text_bbox[3] - text_bbox[1]
-        position = ((image_size[0] - text_width) // 2, (image_size[1] - text_height) // 2)
+        position = self.random_position_with_constraints()
 
         draw.text(position, text, fill='black', font=font)
 
         return image
 
-    def generate_images(self):
-        for i in range(20):
-            lang = random.choice(['rus', 'eng'])
-            text = StringGenerator.text_generator(lang)
+    def generate_images(self, index, answer, style=False, same_text=False):
+        lang = random.choice(['rus', 'eng'])
+        # одинаковый шрифт
+        if style:
             font_path = random.choice(self.fonts)
-            image = self.create_image_with_text(text, font_path)
-            image.save(f'dataset/image_{i}.png')
+            font_name = os.path.basename(font_path).split('.')[0]
+            images = []
+            for i in range(2):
+                text = StringGenerator.text_generator(lang)
+                images.append(self.draw_font(text, font_path, self.image_size, self.font_size))
+        # одинаковый текст
+        elif same_text:
+            text = StringGenerator.text_generator(lang)
+            images = []
+            for i in range(2):
+                font_path = random.choice(self.fonts)
+                font_name = os.path.basename(font_path).split('.')[0]
+                images.append(self.draw_font(text, font_path, self.image_size, self.font_size))
+        # все разное
+        else:
+            images = []
+            for i in range(2):
+                font_path = random.choice(self.fonts)
+                font_name = os.path.basename(font_path).split('.')[0]
+                text = StringGenerator.text_generator(lang)
+                images.append(self.draw_font(text, font_path, self.image_size, self.font_size))
+        final_image = Image.new('RGB', (images[0].width + images[1].width, images[1].height))
+        final_image.paste(images[0], (0, 0))
+        final_image.paste(images[1], (images[0].width, 0))
+        final_image.save(f'dataset/{answer}/image_{index}_{font_name}.png')
 
 
 font_generator = FontGenerator()
-font_generator.generate_images()
+for i in range(10000):
+    if i < 2500:
+        font_generator.generate_images(i, answer=0)
+    elif i < 5000:
+        font_generator.generate_images(i, answer=1, style=True)
+    else:
+        font_generator.generate_images(i, answer=0, same_text=True)
