@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="590fc6f2-44af-4a21-8ead-53d15c57eca6" name="Changes" comment="added font_generator using PIL">
+    <list default="true" id="590fc6f2-44af-4a21-8ead-53d15c57eca6" name="Changes" comment="updated">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classifier/pil_font_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/classifier/pil_font_generator.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -320,7 +319,23 @@
       <option name="project" value="LOCAL" />
       <updated>1740764705911</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="added generate_images that generate 2 images for 3 cases">
+      <option name="closed" value="true" />
+      <created>1740929365218</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1740929365218</updated>
+    </task>
+    <task id="LOCAL-00018" summary="updated">
+      <option name="closed" value="true" />
+      <created>1740930098359</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1740930098359</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -363,6 +378,8 @@
     <MESSAGE value="added comments" />
     <MESSAGE value="added model" />
     <MESSAGE value="added font_generator using PIL" />
-    <option name="LAST_COMMIT_MESSAGE" value="added font_generator using PIL" />
+    <MESSAGE value="added generate_images that generate 2 images for 3 cases" />
+    <MESSAGE value="updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated" />
   </component>
 </project>
