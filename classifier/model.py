@@ -100,7 +100,9 @@ def classifier(model, char):
     gray_image = image_to_gray(char)
     data = gray_image.unsqueeze(0)
     rez = model(data)
-    return torch.mean(rez, 0)
+    # применяем сигмоидную функцию для получения вероятности
+    probability = torch.sigmoid(rez)
+    return torch.mean(probability, 0)
 
 
 def interpretation_class(v):
