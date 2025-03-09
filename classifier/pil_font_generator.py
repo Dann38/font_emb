@@ -87,7 +87,7 @@ class FontGenerator:
         final_image = Image.new('RGB', (images[0].width + images[1].width, images[1].height))
         final_image.paste(images[0], (0, 0))
         final_image.paste(images[1], (images[0].width, 0))
-        final_image.save(f'dataset/{answer}/image_{index}_{font_name}.png')
+        final_image.save(f'dataset/{answer}/image_{index}.png')
 
 
 font_generator = FontGenerator()
