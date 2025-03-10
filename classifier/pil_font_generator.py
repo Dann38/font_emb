@@ -1,4 +1,4 @@
-import os.path
+import os
 import random
 from PIL import Image, ImageDraw, ImageFont
 from string_generator import StringGenerator
@@ -6,27 +6,29 @@ from string_generator import StringGenerator
 
 class FontGenerator:
     def __init__(self):
-        self.fonts = [
-            r'fonts\\arial.ttf',  # Arial
-            r'fonts\\times.ttf'  # Times New Roman
-            r'fonts\\calibri.ttf',  # Calibri
-            r'fonts\\impact.ttf',  # Impact
-            r'fonts\\ariblk.ttf',  # Arial Black
-            r'fonts\\cour.ttf',  # Courier New
-            r'fonts\\consola.ttf',  # Consolas
-            r'fonts\\CascadiaMono.ttf',  # Cascadis Mono
-            r'fonts\\verdana.ttf',  # Verdana
-            r'fonts\\tahoma.ttf',  # Tahoma
-            r'fonts\\lucon.ttf',  # Lucida Console
-            r'fonts\\GARA.ttf',  # Garamond
-            r'fonts\\BKANT.ttf',  # Book Antiqua
-            r'fonts\\cambria.ttc',  # Cambria
-            r'fonts\\constan.ttf',  # Constantia
-            r'fonts\\segoesc.ttf',  # Segoe Script
-            r'fonts\\comic.ttf',  # Comic Sans MS
-            r'fonts\\MTCORSVA.ttf',  # Monotype Corsiva
+        # Смотря из какой папки запускать
+        # self.fonts = [os.path.join('classifier', 'fonts', name) for name in [
+        self.fonts = [os.path.join( 'fonts', name) for name in [
+            'arial.ttf',  # Arial
+            'calibri.ttf',  # Calibri
+            'times.ttf',  # Times New Roman
+            'impact.ttf',  # Impact
+            'ariblk.ttf',  # Arial Black
+            'cour.ttf',  # Courier New
+            'consola.ttf',  # Consolas
+            'CascadiaMono.ttf',  # Cascadis Mono
+            'verdana.ttf',  # Verdana
+            'tahoma.ttf',  # Tahoma
+            'lucon.ttf',  # Lucida Console
+            'GARA.ttf',  # Garamond
+            'BKANT.ttf',  # Book Antiqua
+            'cambria.ttc',  # Cambria
+            'constan.ttf',  # Constantia
+            'segoesc.ttf',  # Segoe Script
+            'comic.ttf', # Comic Sans MS
+            'MTCORSVA.ttf'  # Monotype Corsiva
+        ]]
 
-        ]
         self.image_size = (120, 60)
         self.font_size = 40
         self.intervals = [
@@ -87,15 +89,18 @@ class FontGenerator:
         final_image = Image.new('RGB', (images[0].width + images[1].width, images[1].height))
         final_image.paste(images[0], (0, 0))
         final_image.paste(images[1], (images[0].width, 0))
-        final_image.save(f'dataset/image_{index}.png')
+        final_image.save(os.path.join('dataset', str(answer), f'image_{index}.png'))
 
-
-# font_generator = FontGenerator()
-
-# for i in range(5000):
-#     if i < 2500:
-#         font_generator.generate_images(i, answer=0)
-#     else:
-#         font_generator.generate_images(i, answer=0, same_text=True)
-# for i in range(5000):
-#     font_generator.generate_images(i, answer=1, style=True)
+if __name__ == '__main__':
+    font_generator = FontGenerator()
+    os.mkdir('dataset')
+    os.mkdir(os.path.join('dataset', '0'))
+    os.mkdir(os.path.join('dataset', '1'))
+    
+    for i in range(5000):
+        if i < 2500:
+            font_generator.generate_images(i, answer=0)
+        else:
+            font_generator.generate_images(i, answer=0, same_text=True)
+    for i in range(5000):
+        font_generator.generate_images(i, answer=1, style=True)
