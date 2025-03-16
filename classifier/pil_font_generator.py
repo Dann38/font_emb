@@ -6,9 +6,7 @@ from string_generator import StringGenerator
 
 class FontGenerator:
     def __init__(self):
-        # Смотря из какой папки запускать
-        # self.fonts = [os.path.join('classifier', 'fonts', name) for name in [
-        self.fonts = [os.path.join( 'fonts', name) for name in [
+        self.fonts = [os.path.join('fonts', name) for name in [
             'arial.ttf',  # Arial
             'calibri.ttf',  # Calibri
             'times.ttf',  # Times New Roman
@@ -91,16 +89,16 @@ class FontGenerator:
         final_image.paste(images[1], (images[0].width, 0))
         final_image.save(os.path.join('dataset', str(answer), f'image_{index}.png'))
 
-if __name__ == '__main__':
-    font_generator = FontGenerator()
-    os.mkdir('dataset')
-    os.mkdir(os.path.join('dataset', '0'))
-    os.mkdir(os.path.join('dataset', '1'))
-    
-    for i in range(5000):
-        if i < 2500:
-            font_generator.generate_images(i, answer=0)
-        else:
-            font_generator.generate_images(i, answer=0, same_text=True)
-    for i in range(5000):
-        font_generator.generate_images(i, answer=1, style=True)
+# if __name__ == '__main__':
+#     font_generator = FontGenerator()
+#     os.mkdir('dataset')
+#     os.mkdir(os.path.join('dataset', '0'))
+#     os.mkdir(os.path.join('dataset', '1'))
+#
+#     for i in range(5000):
+#         if i < 2500:
+#             font_generator.generate_images(i, answer=0)
+#         else:
+#             font_generator.generate_images(i, answer=0, same_text=True)
+#     for i in range(5000):
+#         font_generator.generate_images(i, answer=1, style=True)
