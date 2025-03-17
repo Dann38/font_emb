@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="590fc6f2-44af-4a21-8ead-53d15c57eca6" name="Changes" comment="added font_model.ipynb">
+    <list default="true" id="590fc6f2-44af-4a21-8ead-53d15c57eca6" name="Changes" comment="added comments">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classifier/font_model.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/classifier/font_model.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classifier/pil_font_generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/classifier/pil_font_generator.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -403,7 +402,23 @@
       <option name="project" value="LOCAL" />
       <updated>1742112798773</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="added 2 models in font_model.ipynb">
+      <option name="closed" value="true" />
+      <created>1742137922279</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1742137922279</updated>
+    </task>
+    <task id="LOCAL-00027" summary="added comments">
+      <option name="closed" value="true" />
+      <created>1742137985120</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1742137985120</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -443,7 +458,6 @@
     <MESSAGE value="added fonts classification" />
     <MESSAGE value="fixed" />
     <MESSAGE value="added generator of 2 images with 4 combinations" />
-    <MESSAGE value="added comments" />
     <MESSAGE value="added model" />
     <MESSAGE value="added font_generator using PIL" />
     <MESSAGE value="added generate_images that generate 2 images for 3 cases" />
@@ -454,6 +468,8 @@
     <MESSAGE value="updated generation" />
     <MESSAGE value="added sigmoid" />
     <MESSAGE value="added font_model.ipynb" />
-    <option name="LAST_COMMIT_MESSAGE" value="added font_model.ipynb" />
+    <MESSAGE value="added 2 models in font_model.ipynb" />
+    <MESSAGE value="added comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="added comments" />
   </component>
 </project>
